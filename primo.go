@@ -5,28 +5,36 @@ import "fmt"
 func main (){
 	fmt.Println(ePrimo(7))
 	fmt.Println(ePrimo(10))
-	fmt.Println(fibo(8))
+	fmt.Println(fibo(7))
 	fmt.Println(dia(2))
-	fmt.Println(bissexto(2017))
+	fmt.Println(bissexto(1900))
+	fmt.Println(bissexto(2012))
+
+
+
 }
 
 func ePrimo(n int) bool{
 	var primo bool
 	primo =true
+
 	for i := 2; i < n; i++ {
 		if n % i == 0 {
 			primo = false
 			fmt.Println(i)
-			fmt.Println("------")
+
+
 
 		}
 	}
-	return primo
 
+	return primo
 
 }
 
+
 func fibo (n int ) int{
+	fmt.Println("EXEC 2")
 	var f1, f2 int  = 0 , 1
 	fmt.Println("1")
 	for i := 0; i < n-1; i++ {
@@ -37,10 +45,13 @@ func fibo (n int ) int{
 
 	}
 
-	fmt.Println("___________________")
-	return f1
+	fmt.Println("				")
+	return f2
 }
+
+
 func dia (n int) string {
+	fmt.Println("EXEC 3")
 	switch n {
 	case 1, 8, 15, 22, 29:
 		fmt.Println("domingo")
@@ -63,15 +74,18 @@ func dia (n int) string {
 		return  ("_____________________")
 }
 
-
-func bissexto(n int ) bool {
-	var ver int
-	ver = n % 4
-	if ver == 0 {
-			return true
+func bissexto(n int) bool {
+	fmt.Println("EXEC 4")
+	var ver4, ver1 int
+	ver1 = n % 100
+	ver4 = n % 4
+	if ver4 > 0 {
+		fmt.Println("O ano NÃO é bissexto")
+		return false
+	} else if ver1 == 0 {
+		fmt.Println("O ano NÃO é bissexto")
+		return false
 	}
-	return false
-
-
-
+	fmt.Println("O ano é SIM bissexto")
+	return true
 }
