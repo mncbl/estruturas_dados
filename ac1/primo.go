@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main (){
-	fmt.Println(ePrimo(7))
-	fmt.Println(ePrimo(10))
+	fmt.Println(ePrimo(13))
+	fmt.Println(ePrimo(12))
 	fmt.Println(fibo(7))
 	fmt.Println(dia(2))
-	fmt.Println(bissexto(1900))
+	fmt.Println(bissexto(1997))
 	fmt.Println(bissexto(2012))
 
 
